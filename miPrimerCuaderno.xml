@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE items>
+<items>
+    <row>
+       <ID>1</ID>
+       <Name>https://sql-page.com/</Name>
+       <Hint>SQLPage turns SQL queries into interactive web pages, forms, maps, and dashboards.</Hint>
+    </row>
+    <row>
+       <ID>2</ID>
+       <Name>https://fullconvert.com/</Name>
+       <Hint>Full Convert is industry standard for database migration. Over 40 database formats supported with unparalleled speed, ease of use, and migration customization.</Hint>
+    </row>
+    <row>
+       <ID>3</ID>
+       <Name>SQL Online AiDE</Name>
+       <Hint>Next-Gen AI Development Environment | 10+ years of superior SLA, Performance & UX</Hint>
+    </row>
+    <row>
+       <ID>4</ID>
+       <Name>https://t.me/s/sqliteonlinecom</Name>
+       <Hint>Telegram channel with news about the project</Hint>
+    </row>
+    <row>
+       <ID>5</ID>
+       <Name>N`Kirill.</Name>
+       <Hint>https://www.linkedin.com/in/sqliteonlinecom</Hint>
+    </row>
+    <row>
+       <ID>6</ID>
+       <Name>Import</Name>
+       <Hint>➕ → Import</Hint>
+    </row>
+    <row>
+       <ID>7</ID>
+       <Name>Export</Name>
+       <Hint>[RightClick] mouse on Table OR It’s now the first one at the bottom right of the table.</Hint>
+    </row>
+    <row>
+       <ID>8</ID>
+       <Name>SQLite OpFS (storage)</Name>
+       <Hint>Enable OpFS on settings</Hint>
+    </row>
+    <row>
+       <ID>9</ID>
+       <Name>Chart</Name>
+       <Hint>LINE-SELECT name, cos(id), sin(id) FROM demo;</Hint>
+    </row>
+    <row>
+       <ID>10</ID>
+       <Name>Short CODE</Name>
+       <Hint>s* tableName => SELECT * FROM tableName
+sf tableName => SELECT columns FROM tableName
+sc tableName => SELECT count(*) FROM tableName
+sl tableName => SELECT * FROM tableName ORDER BY key DESC LIMIT 100;
+ct => CREATE TABLE
+ii tableName => INSERT INTO
+us tableName => UPDATE SET
+uw tableName => UPDATE SET WHERE
+df tableName => DELETE FROM
+dw tableName => DELETE FROM WHERE</Hint>
+    </row>
+    <row>
+       <ID>11</ID>
+       <Name>SQLite 3.51.1</Name>
+       <Hint>SQL OnLine on JavaScript</Hint>
+    </row>
+    <row>
+       <ID>12</ID>
+       <Name>[RightClick] mouse</Name>
+       <Hint>Opens many additional features</Hint>
+    </row>
+    <row>
+       <ID>13</ID>
+       <Name>Left-Panel, Table</Name>
+       <Hint>[RightClick] mouse "Context menu"</Hint>
+    </row>
+    <row>
+       <ID>14</ID>
+       <Name>Tabs</Name>
+       <Hint>mouse: [RightClick] , [MiddleClick] , [Wheel] , [LeftClick]</Hint>
+    </row>
+    <row>
+       <ID>15</ID>
+       <Name>SQL Editor</Name>
+       <Hint>autocomplete: [Ctrl-Space] or [Alt-Space]; run: [Shift-Enter]</Hint>
+    </row>
+    <row>
+       <ID>16</ID>
+       <Name>Size table</Name>
+       <Hint>Fast scroll million rows</Hint>
+    </row>
+    <row>
+       <ID>17</ID>
+       <Name>Share</Name>
+       <Hint>Create public link DB</Hint>
+    </row>
+    <row>
+       <ID>18</ID>
+       <Name>21</Name>
+       <Hint>Number of color themes</Hint>
+    </row>
+    <row>
+       <ID>19</ID>
+       <Name>ai.Url</Name>
+       <Hint>https://sqliteonline.com/LICENSE</Hint>
+    </row>
+    <row>
+       <ID>20</ID>
+       <Name>ai.Color</Name>
+       <Hint>#9393ad</Hint>
+    </row>
+    <row>
+       <ID>21</ID>
+       <Name>ai.Image</Name>
+       <Hint>Blob - png, jpg, gif or String(base64) [DbClick] row</Hint>
+    </row>
+    <row>
+       <ID>22</ID>
+       <Name>SQL</Name>
+       <Hint>Syntax example library</Hint>
+    </row>
+    <row>
+       <ID>23</ID>
+       <Name>CREATE</Name>
+       <Hint>CREATE TABLE table_name (col1, col2)</Hint>
+    </row>
+    <row>
+       <ID>24</ID>
+       <Name>SELECT</Name>
+       <Hint>SELECT * FROM table_name</Hint>
+    </row>
+    <row>
+       <ID>25</ID>
+       <Name>INSERT</Name>
+       <Hint>INSERT INTO table_name (col1, col2) VALUES ("example","test")</Hint>
+    </row>
+    <row>
+       <ID>26</ID>
+       <Name>UPDATE</Name>
+       <Hint>UPDATE table_name SET col1="work" WHERE col2="test"</Hint>
+    </row>
+    <row>
+       <ID>27</ID>
+       <Name>DELETE</Name>
+       <Hint>DELETE FROM table_name</Hint>
+    </row>
+</items>
