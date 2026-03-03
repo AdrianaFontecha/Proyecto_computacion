@@ -99,9 +99,9 @@ module.exports = {
   register(req, res) {
     const user = req.body;
 
-    if (!user.rol) {
-      user.rol = "Admin";
-    }
+    // if (!user.rol) {
+    //   user.rol = "Admin";
+    // }
 
     User.create(user, (err, data) => {
       if (err) {

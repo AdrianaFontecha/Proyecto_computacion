@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS miPrimerCuadero;
+DROP DATABASE IF EXISTS miPrimerCuaderno;
 
-CREATE DATABASE miPrimerCuadero;
-use miPrimerCuadero;
+CREATE DATABASE miPrimerCuaderno;
+use miPrimerCuaderno;
 /*
 CREATE TABLE tipUso (
 	idtipuso INT PRIMARY KEY,
