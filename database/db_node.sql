@@ -10,9 +10,9 @@ CREATE TABLE tipUso (
 */
 
 CREATE TABLE usuarios (
-    documento INT PRIMARY KEY,
+    documento BIGINT PRIMARY KEY,
     nombUsu VARCHAR(20),
-    password VARCHAR(20),
+    password VARCHAR(255),
     celular VARCHAR(20),
     rol VARCHAR(20)
 );

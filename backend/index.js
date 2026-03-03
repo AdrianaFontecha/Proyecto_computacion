@@ -9,7 +9,7 @@ app.use(cors({
   origin: [
     'http://192.168.1.7',
     'http://localhost', 
-    'http://0.0.0.0'    
+    'http://127.0.0.1'    
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],

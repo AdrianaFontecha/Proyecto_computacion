@@ -26,17 +26,16 @@ User.findById = (documento, result) => {
 };
 
 User.create = async (user, result) => {
-  const hash = await bcrypt.hash(user.password, 10);  
+  console.log(`Data received: ${user}`)
   const validRoles = ['Admin', 'Vendedor'];
-  // Fixed typo: changed user.role to user.rol
   const rol = validRoles.includes(user.rol) ? user.rol : 'Admin';
 
-  const sql = `INSERT INTO usuarios(documento, nombUsu, password, celular, rol) VALUES (?,?,?,?,?)`;
+  const sql = `INSERT INTO usuarios (documento, nombUsu, password, celular, rol) VALUES (?,?,?,?,?)`;
   
   db.query(sql, [
-    user.documento, // Fixed typo: docuemnto -> documento
+    user.documento,
     user.nombUsu,
-    hash,
+    user.password,
     user.celular,
     rol
   ], (err, res) => {
