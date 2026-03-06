@@ -17,24 +17,24 @@ module.exports = {
         });
       }
 
-      if (!myUser) {
+      if (!myUser) {s
         return res.status(401).json({
           success: false,
           message: "El documento no existe en la base de datos",
         });
       }
 
-      const isPasswordValid = await bcrypt.compare(password, myUser.password);
+      const isPasswordValid = await (password, myUser.password);
 
       if (isPasswordValid) {
         const token = jwt.sign(
-          { id: myUser.id, rol: myUser.rol },
+          { documento: myUser.documento, rol: myUser.rol },
           keys.secretOrKey,
           { expiresIn: "1h" }
         );
 
         const data = {
-          id: myUser.documento,
+          documento: myUser.documento,
           nombUsu: myUser.nombUsu,
           celular: myUser.celular,
           rol: myUser.rol,
@@ -49,7 +49,7 @@ module.exports = {
       } else {
         return res.status(401).json({
           success: false,
-          message: "Contraseña o correo incorrecto",
+          message: "Contraseña o documento incorrecto",
         });
       }
     });
