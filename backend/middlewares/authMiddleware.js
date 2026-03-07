@@ -31,12 +31,12 @@ function verifyToken(req, res, next) {
   });
 }
 
-function authorizeRoles(roles) {
+function authorizeRoles(rol) {
   return (req, res, next) => {
-    if (!req.user || !roles.includes(req.user.role)) {
+    if (!req.user || !rol.includes(req.user.rol)) {
       return res.status(403).json({
         success: false,
-        message: `Acceso denegado: se requiere rol ${roles.join(" o ")}`,
+        message: `Acceso denegado: se requiere rol ${rol.join(" o ")}`,
       });
     }
     next();

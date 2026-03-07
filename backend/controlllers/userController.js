@@ -72,8 +72,8 @@ module.exports = {
   },
 
   getUserById(req, res) {
-    const id = req.params.id;
-    User.findById(id, (err, user) => {
+    const documento = req.params.documento;
+    User.findById(documento, (err, user) => {
       if (err) {
         return res.status(501).json({
           success: false,
@@ -138,8 +138,8 @@ module.exports = {
   },
 
   getUserDelete(req, res) {
-    const id = req.params.id;
-    User.delete(id, (err, data) => {
+    const documento = req.params.documento;
+    User.delete(documento, (err, data) => {
       if (err) {
         return res.status(501).json({
           success: false,

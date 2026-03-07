@@ -27,8 +27,8 @@ User.findById = (documento, result) => {
 
 User.create = async (user, result) => {
   console.log(`Data received: ${user}`)
-  const validRoles = ['Admin', 'Vendedor'];
-  const rol = validRoles.includes(user.rol) ? user.rol : 'Admin';
+  // const validRoles = ['Admin', 'Vendedor'];
+  // const rol = validRoles.includes(user.rol) ? user.rol : 'Admin';
 
   const sql = `INSERT INTO usuarios (documento, nombUsu, password, celular, rol) VALUES (?,?,?,?,?)`;
   
@@ -37,13 +37,13 @@ User.create = async (user, result) => {
     user.nombUsu,
     user.password,
     user.celular,
-    rol
+    user.rol
   ], (err, res) => {
     if (err) {
       console.log('Error al crear al Usuario: ', err);
-      result(err, null);
+      res(err, null);
     } else {
-      result(null, { id: user.documento, ...user });
+      res(null, { documento: user.documento, ...user });
     }
   });
 };
@@ -52,22 +52,17 @@ User.update = async (user, result) => {
   let fields = [];
   let values = [];
 
-  if (user.password) {
-    const hash = await bcrypt.hash(user.password, 10);
-    fields.push("password = ?");
-    values.push(hash);
-  }
   if (user.nombUsu) {
     fields.push("nombUsu = ?");
     values.push(user.nombUsu);
   }
+  if (user.password) {
+    fields.push("password = ?");
+    values.push(user.password);
+  }
   if (user.celular) {
     fields.push("celular = ?");
     values.push(user.celular);
-  }
-  if (user.rol) {
-    fields.push("rol = ?");
-    values.push(user.rol);
   }
 
   // We use documento as the identifier for the WHERE clause
@@ -82,11 +77,11 @@ User.update = async (user, result) => {
       result(null, { documento: user.documento, ...user });
     }
   });
-}; // Added closing brace here!
+};
 
-User.delete = (id, result) => {
+User.delete = (documento, result) => {
   const sql = `DELETE FROM usuarios WHERE documento = ?`;
-  db.query(sql, [id], (err, res) => {
+  db.query(sql, [documento], (err, res) => {
     if (err) {
       result(err, null);
     } else {

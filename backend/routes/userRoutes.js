@@ -7,7 +7,7 @@ router.post('/create', userController.register);
 router.post('/login', userController.login);
 // Rutas protegidas
 router.get('/', verifyToken, authorizeRoles(['Admin', 'Vendedor']), userController.getAllUsers);
-router.get('/:id', verifyToken, authorizeRoles(['Admin', 'Vendedor']), userController.getUserById);
-router.put('/:id', verifyToken, authorizeRoles(['Admin', 'Vendedor']), userController.getUserUpdate);
-router.delete('/delete/:id', verifyToken, authorizeRoles(['Admin']), userController.getUserDelete);
+router.get('/:documento', verifyToken, authorizeRoles(['Admin', 'Vendedor']), userController.getUserById);
+router.put('/:documento', verifyToken, authorizeRoles(['Admin', 'Vendedor']), userController.getUserUpdate);
+router.delete('/delete/:documento', verifyToken, authorizeRoles(['Admin']), userController.getUserDelete);
 module.exports = router;
