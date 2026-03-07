@@ -73,10 +73,15 @@ VALUES
 
 INSERT INTO productos (serie, nombProd, tipo, provee, precio) 
 VALUES (
-    7001, 'Cuaderno Rayado 100hj', 'Papelería', 'Distribuidor X', 2.000
+    5784, 'Cuaderno Rayado 100hj', 'Papelería', 'Distribuidor X', 2.000
+);
+
+INSERT INTO productos (serie, nombProd, tipo, provee, precio, stockActual) 
+VALUES (
+    4785, 'Cuaderno Cuadriculado 100hj', 'Papelería', 'Distribuidor Z', 2.500, 580
 );
 
 INSERT INTO movimientos (serie, tipoMov, cantidad) 
 VALUES (
-    7001, 'ENTRADA', 20
+    5784, 'ENTRADA'
 );
