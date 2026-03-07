@@ -16,7 +16,7 @@ module.exports = {
         });
       }
 
-      if (!myUser) {s
+      if (!myUser) {
         return res.status(401).json({
           success: false,
           message: "El documento no existe en la base de datos",

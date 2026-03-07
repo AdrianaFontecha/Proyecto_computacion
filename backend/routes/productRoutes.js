@@ -6,8 +6,8 @@ const { verifyToken, authorizeRoles } = require('../middlewares/authMiddleware')
 
 router.post('/login', userController.login);
 
-router.get('/', verifyToken, authorizeRoles(['Admin','Vendedor']), productController.getAllProducts);
-router.get('/:serie', verifyToken, authorizeRoles(['Admin','Vendedor']), productController.getProductById);
+router.get('/', productController.getAllProducts);
+router.get('/:serie',  productController.getProductById);
 
-router.post('/create', verifyToken, authorizeRoles(['Admin']), productController.register);
+router.post('/create', productController.register);
 module.exports = router
