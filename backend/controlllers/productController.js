@@ -41,4 +41,23 @@ module.exports = {
             });
         });
     },
+
+    register(req, res) {
+        const product = req.body;
+        Product.create(product, (err, data) => {
+            if (err) {
+                return res.status(501).json({
+                    success: false,
+                    msg: "Error al crear el producto",
+                    error: err,
+                })
+            } else {
+                return res.status(201).json({
+                    success: true,
+                    msg: "Producto creado correctamente",
+                    data: data,
+                })
+            }
+        })
+    }
 }

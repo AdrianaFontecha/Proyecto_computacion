@@ -3,6 +3,7 @@ const express = require('express');
 const logger = require('morgan');
 const cors = require('cors');
 const usersRoutes = require('./routes/userRoutes');
+const productRoutes = require('./routes/productRoutes')
 const app = express();
 
 // Middlewares globales
@@ -13,6 +14,7 @@ app.use(cors());
 
 // Rutas
 app.use('/api/users', usersRoutes);
+app.use('/api/products', productRoutes);
 
 // Endpoints de prueba
 app.get('/', (req, res) => {

@@ -24,22 +24,22 @@ Product.findById = (serie, r) => {
     });
 };
 
-Product.create = async (product, r) => {
+Product.create = async (product, result) => {
     console.log(`Data received: ${product}`)
-    const sql = `INSERT INTO productos (serie, nombProd, tipo, provee, precio, stockActual) VALUES (?,?,?,?,?,?)`;
+    const sql = `INSERT INTO productos (serie, stockActual, tipo, nombProd, precio, provee) VALUES (?,?,?,?,?,?)`;
     db.query(sql, [
         product.serie,
-        product.nombProd,
+        product.stockActual,
         product.tipo,
-        product.provee,
+        product.nombProd,
         product.precio,
-        product.stockActual
+        product.provee
     ], (err, res) => {
         if (err) {
             console.log('Error al crear al Producto: ', err);
-            res(err, null);
+            result(err, null);
         } else {
-            res(null, { serie: product.serie, ...product });
+            result(null, { serie: product.serie, ...product });
         }
     });
 };
